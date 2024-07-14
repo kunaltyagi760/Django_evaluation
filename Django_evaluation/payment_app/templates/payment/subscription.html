@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Subscriptions</title>
+</head>
+<body>
+    <h1>This is Subscriptions Page.</h1>
+    <a href="{% url 'create_subsciption' %}">Add New Subscription</a>
+    <br>
+
+    {% for sub in subs %}
+        <h3>User : {{sub.user}}</h3>
+        <h3>Service : {{sub.service}}</h3>
+        <h3>Amount : {{sub.amount}}</h3>
+        <h3>Current Date : {{sub.current_date}}</h3>
+        <br><br>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Detail</title>
+</head>
+<body>
+    <h1>This service deatail page.</h1>
+    <h3>Type : {{service.type}}</h3>
+    <h3>Payment Mode : {{service.mode_of_payment}}</h3>
+    <h3>Company : {{service.company}}</h3>
+    <h3>Users</h3>
+    <ul>
+        {% for user in service.service_user.all %}
+        <li>{{ user.name }}</li>
+        {% endfor %}
+    </ul>
+    
+
+</body>
